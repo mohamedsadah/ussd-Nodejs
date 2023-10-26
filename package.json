@@ -1,0 +1,30 @@
+{
+  "name": "ussd.js",
+  "version": "1.0.0",
+  "description": "packages for ussd in node js",
+  "main": "ussd.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm start",
+    "start": "ussd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedsadah/ussd-Nodejs.git"
+  },
+  "keywords": [
+    "require"
+  ],
+  "author": "Mo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamedsadah/ussd-Nodejs/issues"
+  },
+  "homepage": "https://github.com/mohamedsadah/ussd-Nodejs#readme",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "curl": "^0.1.4",
+    "express": "^4.18.2",
+    "require": "^2.4.20"
+  }
+}
