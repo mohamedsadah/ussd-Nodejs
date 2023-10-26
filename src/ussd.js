@@ -6,7 +6,7 @@ export const port = 3000;
 
 app.use(express.json());
 
-app.post('/ussd', async (req, res) => {
+app.post('/', async (req, res) => {
   // Get the request parameters
   const sessionId = req.body.sessionId;
   const serviceCode = req.body.serviceCode;
