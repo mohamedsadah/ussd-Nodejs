@@ -1,8 +1,10 @@
 import express from 'express';
 import axios from 'axios';
+import bodyParser from 'body-parser';
 
-export const app = express();
-export const port = 3000;
+const app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.json());
 
@@ -137,17 +139,12 @@ app.post('/', async (req, res) => {
   }
 
   // Send the response back to the USSD API
-    res.set('Content-Type', 'text/plain');
-
+  res.set('Content-Type', 'text/plain');
   res.send(response);
 });
-app.get('/', (req, res) => {
-    // Handle the GET request to the root URL, you can send a welcome message or do something else here
-    res.send('Welcome to Mocha USSD service.');
-  });
+app.listen(3000)
 
-await app.listen(port);
-console.log('Server is listening on port ' + port);
+
 
 
 
