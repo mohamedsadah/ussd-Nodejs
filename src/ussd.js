@@ -83,9 +83,10 @@ app.post('/', async (req, res) => {
 
     // Construct the response
     response = 'END Your request is successful. You will receive a confirmation by SMS \n';
-    tokenBalances.forEach(balance => {
-      response += `${balance.symbol}: ${balance.amount}\n`;
-    });
+    let Balance = tokenBalances.forEach(balance => {
+     `${balance.symbol}: ${balance.amount}\n`;
+  });
+  response += Balance;
   }
 
   // If the text is 2, fetch the wallet address and send it to the user
